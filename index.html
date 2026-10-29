@@ -307,8 +307,25 @@ footer .ph{color:var(--ink)}
   .final .cta{width:auto;display:inline-flex;padding:22px 46px}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1093743330089217');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1093743330089217&ev=PageView&noscript=1"
+/></noscript>
 
 <!-- ============ 1. HERO ============ -->
 <header class="hero">
@@ -662,6 +679,10 @@ const CHECKOUT_URL = "https://pay.cakto.com.br/uyrvtp9_1257107";
 const qs = location.search;
 document.querySelectorAll('[data-checkout]').forEach(a => {
   a.href = CHECKOUT_URL + (qs ? (CHECKOUT_URL.includes('?') ? '&' + qs.slice(1) : qs) : '');
+  /* Meta Pixel: avisa o início do checkout ao clicar em comprar */
+  a.addEventListener('click', () => {
+    if (window.fbq) fbq('track', 'InitiateCheckout', {value: 37.00, currency: 'BRL', content_name: 'Bolo Retangular Lucrativo'});
+  });
 });
 </script>
 </body>
