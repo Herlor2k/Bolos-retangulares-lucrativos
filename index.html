@@ -343,7 +343,7 @@ src="https://www.facebook.com/tr?id=1093743330089217&ev=PageView&noscript=1"
 
       <a class="cta" data-checkout href="https://pay.cakto.com.br/uyrvtp9_1257107">Quero o Bolo Retangular Lucrativo</a>
       <div class="cta-note">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>R$ 37 à vista</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>R$ 10 à vista</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Chega no seu e-mail na hora</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>7 dias de garantia</span>
       </div>
@@ -568,8 +568,8 @@ src="https://www.facebook.com/tr?id=1093743330089217&ev=PageView&noscript=1"
       </ul>
 
       <p class="from">Preço cheio <s>R$ 97</s></p>
-      <p class="now"><small>R$</small><b>37</b></p>
-      <p class="pay-note">à vista no Pix ou no cartão. Parcelamento disponível no checkout, com os juros da plataforma.</p>
+      <p class="now"><small>R$</small><b>10</b></p>
+      <p class="pay-note">pagamento único, no Pix ou no cartão.</p>
 
       <a class="cta" data-checkout href="https://pay.cakto.com.br/uyrvtp9_1257107">Quero o Bolo Retangular Lucrativo</a>
       <div class="cta-note">
@@ -643,7 +643,7 @@ src="https://www.facebook.com/tr?id=1093743330089217&ev=PageView&noscript=1"
 <section class="final">
   <div class="wrap narrow">
     <h2>Seu próximo pedido já pagará o guia, não perca tempo, as suas concorrentes já estão usando.</h2>
-    <p class="lead">R$ 37, acesso na hora e 7 dias para testar sem risco.</p>
+    <p class="lead">R$ 10, acesso na hora e 7 dias para testar sem risco.</p>
     <a class="cta" data-checkout href="https://pay.cakto.com.br/uyrvtp9_1257107">Quero o Bolo Retangular Lucrativo</a>
     <div class="cta-note">
       <span>Pagamento seguro</span><span>Acesso imediato</span><span>Garantia de 7 dias</span>
@@ -681,7 +681,7 @@ document.querySelectorAll('[data-checkout]').forEach(a => {
   a.href = CHECKOUT_URL + (qs ? (CHECKOUT_URL.includes('?') ? '&' + qs.slice(1) : qs) : '');
   /* Meta Pixel: avisa o início do checkout ao clicar em comprar */
   a.addEventListener('click', () => {
-    if (window.fbq) fbq('track', 'InitiateCheckout', {value: 37.00, currency: 'BRL', content_name: 'Bolo Retangular Lucrativo'});
+    if (window.fbq) fbq('track', 'InitiateCheckout', {value: 10.00, currency: 'BRL', content_name: 'Bolo Retangular Lucrativo'});
   });
 });
 </script>
